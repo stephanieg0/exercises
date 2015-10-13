@@ -54,8 +54,11 @@ for (var i = 0;  i < scores.length; i++) {
 
 //printing my arrays
 
-console.log("lowest grades", f.length);
-console.log("highest grades", a.length);
+console.log("grades with F", f.length);
+console.log("grades with D", d.length);
+console.log("grades with C", c.length);
+console.log("grades with B", b.length);
+console.log("grades with A", a.length);
 console.log("lowest grade", lowestGrade);
 console.log("highest grade", highestGrade);
 
