@@ -59,33 +59,3 @@ console.log("highest grades", a.length);
 console.log("lowest grade", lowestGrade);
 console.log("highest grade", highestGrade);
 
-
-
-
-/* 	switch(scores) {
-		case 50:
-		case 51:
-		case 52:
-		case 53:
-		case 54:
-		case 55:
-		case 56:
-		case 57:
-		case 58:
-		case 59:
-		case 60:
-		break;
-		console.log("F");
-		case 61:
-		case 62:
-		case 63:
-		case 64:
-		case 65:
-		case 66:
-		case 67:
-		case 68:
-		case 69:
-		case 70:
-		break;
-		console.log("D");
-		*/
