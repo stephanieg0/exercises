@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="temperatureStyle.css">
+	</head>
+	<body>
+		<div class = "center">
+			<h2>Temp</h2>
+			<!--TEMPERATURE BOX-->
+			<label></label>
+			<input type = "text" id="value">
+
+			<!--RADIO BUTTONS-->
+			<input type = "radio" name = "temp" value="Fahrenheit"checked id="F" onclick="determineConverter">Fahrenheit
+		    <input type = "radio" name ="temp" value="Celsius" id="C" onclick="determineConverter">Celsius
+		</div>
+
+		<!--CONVERT BUTTON-->
+		<div class = "center">
+			<input type="submit" id="converter" value = "Submit">
+			<input type="submit" id="clear" value = "Clear">
+	    </div>
+	    <div id="tempOutput">
+	    	
+	    </div>
+		<script src="temperature.js"></script>
+	</body>
+</html>

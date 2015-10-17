@@ -1,0 +1,14 @@
+.center {
+	text-align: center;
+}
+
+#converter {
+/*	width: 75px; 
+	height: 40px;
+	font-size: 15px;
+	margin: 5px;*/
+}
+
+#tempOutput {
+	margin-left: 40px;
+}
