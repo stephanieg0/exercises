@@ -24,7 +24,7 @@
   9. For any other temperature, the color should be green.
 */
 
-//TO CELSIUS
+//To Celsius function
 function toCelsius (tempFahr) {
   tempFahr = (tempFahr - 32) * 5 / 9;
   console.log(tempFahr + " celsius");
@@ -32,7 +32,7 @@ function toCelsius (tempFahr) {
  }
 
 
-//TO FARH
+//To Fahrenheit fuction
 function toFahrenheit(tempCelsius) {
   tempCelsius = (tempCelsius * 1.8) + 32;
   console.log(tempCelsius + " fahrenheit");
@@ -40,33 +40,60 @@ function toFahrenheit(tempCelsius) {
   }
 
 
-// Get a reference to the button element in the DOM
+// Refence ids from html
 var button = document.getElementById("converter");
 var clearButton = document.getElementById("clear");
 var tempOutPut = document.getElementById("tempOutput");
 var temperature = document.getElementById("value");
 
-//LINK TO RADIO BUTTON FAHRENHEIT
 
+//Main converter Function
 function determineConverter() {
-  //getting value from the box
+  //Linking ids to the radio buttons and the input box
   var temperature = document.getElementById("value").value;
   var radioButtonF = document.getElementById("F");
   var radioButtonC = document.getElementById("C");
-
+  //conditional statement for fahrenheit or celsius buttons
   if (radioButtonF.checked) {
     var resultFahrenheit = toFahrenheit(temperature);
      tempOutPut.innerHTML = Math.round(resultFahrenheit);
+  } else if (radioButtonC.checked) {
+      var resultCelsius = toCelsius(temperature);
+      tempOutput.innerHTML = Math.round(resultCelsius);
+  }
+  //Fahrenheit conditional statement for temperature link to color ids
+  if(resultFahrenheit >= 90) {
+    tempOutput.classlist.add("hot");
+
+  } else if (resultFahrenheit <= 32) {
+    tempOutput.classlist.add("cold");
+
+  } else {
+    tempOutput.classlist.add("normal");
   }
 
+  //Celsius conditional statement for temperature link to color ids
+  if(resultCelsius >= 32) {
+    tempOutput.classlist.add("hot");
+
+  } else if (resultCelsius <= 0) {
+    tempOutput.classlist.add("cold");
+
+  } else {
+    tempOutput.classlist.add("normal");
+  }
+
+  return determineConverter();
 }
 
 
-//Assign a function to be executed when the button is clicked
 
+//Assign a function to be executed when the button is clicked
 button.addEventListener("click", determineConverter);
+
 clearButton.addEventListener("click", function() {
-  temperature.value = " ";
+  temperature.value = "";
+  tempOutput.innerHTML = "";
 });
 
 

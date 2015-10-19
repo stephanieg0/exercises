@@ -4,14 +4,13 @@
 	</head>
 	<body>
 		<div class = "center">
-			<h2>Temp</h2>
+			<h2>Temperature Converter</h2>
 			<!--TEMPERATURE BOX-->
-			<label></label>
 			<input type = "text" id="value">
 
 			<!--RADIO BUTTONS-->
-			<input type = "radio" name = "temp" value="Fahrenheit"checked id="F" onclick="determineConverter">Fahrenheit
-		    <input type = "radio" name ="temp" value="Celsius" id="C" onclick="determineConverter">Celsius
+			<input type = "radio" name = "temp" value="Fahrenheit"checked id="F" onclick="determineConverter">To Fahrenheit
+		    <input type = "radio" name ="temp" value="Celsius" id="C" onclick="determineConverter">To Celsius
 		</div>
 
 		<!--CONVERT BUTTON-->
@@ -19,9 +18,10 @@
 			<input type="submit" id="converter" value = "Submit">
 			<input type="submit" id="clear" value = "Clear">
 	    </div>
+	    <!--TEMPERATURE RESULT FOM JS-->
 	    <div id="tempOutput">
-	    	
 	    </div>
+	
 		<script src="temperature.js"></script>
 	</body>
 </html>

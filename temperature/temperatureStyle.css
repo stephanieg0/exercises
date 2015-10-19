@@ -2,13 +2,23 @@
 	text-align: center;
 }
 
-#converter {
-/*	width: 75px; 
-	height: 40px;
-	font-size: 15px;
-	margin: 5px;*/
+#tempOutput {
+	text-align: center;
+	font-size: 2em;
+	margin-top: 10px;
 }
 
-#tempOutput {
-	margin-left: 40px;
+#tempOutput.hot {
+	color: red;
+		
+}
+
+#tempOutput.cold {
+	color: blue;
+	
+}
+
+#tempOutput.normal {
+	color: green;
+	
 }
